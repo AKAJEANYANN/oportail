@@ -1,0 +1,139 @@
+{
+  "name": "operator",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "operatorLogo": {
+      "type": "string",
+      "default": ""
+    },
+    "operatorName": {
+      "type": "string",
+      "default": ""
+    },
+    "operatorLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "operatorServiceName": {
+      "type": "string",
+      "default": ""
+    },
+    "focusColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnBgCallToActionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnTextCallToActionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "bgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "operatorLabelColor": {
+      "type": "string",
+      "default": ""
+    },
+    "primaryTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "dialCode": {
+      "type": "string",
+      "default": ""
+    },
+    "code": {
+      "type": "string",
+      "default": ""
+    },
+    "demo": {
+      "type": "boolean",
+      "default": false
+    },
+    "startNumbers": {
+      "type": "string",
+      "default": ""
+    },
+    "lengthNumber": {
+      "type": "number"
+    },
+    "enableOperator": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoApprouveMusic": {
+      "type": "boolean",
+      "default": true
+    },
+    "defaultLanguage": {
+      "type": "string",
+      "default": ""
+    },
+    "devise": {
+      "type": "string",
+      "default": ""
+    },
+    "sizeSpace": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "selfcares": {
+      "type": "hasMany",
+      "model": "selfcare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "messages": {
+      "type": "hasMany",
+      "model": "message",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "administrators": {
+      "type": "hasMany",
+      "model": "administrator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "media": {
+      "type": "hasMany",
+      "model": "media",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

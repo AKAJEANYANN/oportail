@@ -1,0 +1,39 @@
+{
+  "name": "selfcareHasMedia",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "like": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "media": {
+      "type": "belongsTo",
+      "model": "media",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "selfcare": {
+      "type": "belongsTo",
+      "model": "selfcare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

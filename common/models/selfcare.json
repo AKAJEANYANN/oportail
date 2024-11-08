@@ -1,0 +1,79 @@
+{
+  "name": "selfcare",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "selfcareFullName": {
+      "type": "string",
+      "default": ""
+    },
+    "selfcarePhone": {
+      "type": "string",
+      "default": ""
+    },
+    "selfcareDateCreation": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "selfcareApprouve": {
+      "type": "boolean",
+      "default": true
+    },
+    "selfcareDateApprouve": {
+      "type": "date"
+    },
+    "selfcareCode": {
+      "type": "string",
+      "default": ""
+    },
+    "selfcareActif": {
+      "type": "boolean",
+      "default": true
+    },
+    "selfcareDesactifDate": {
+      "type": "date"
+    },
+    "device_fcm_token": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {
+    "messages": {
+      "type": "hasMany",
+      "model": "message",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "operator": {
+      "type": "belongsTo",
+      "model": "operator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "media": {
+      "type": "hasMany",
+      "model": "media",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "selfcareHasMedia"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

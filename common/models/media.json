@@ -1,0 +1,52 @@
+{
+  "name": "media",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "mediaUrl": {
+      "type": "string"
+    },
+    "mediaName": {
+      "type": "string"
+    },
+    "mediaDateCreate": {
+      "type": "date"
+    },
+    "mediaDuration": {
+      "type": "number"
+    },
+    "mediaVisible": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "operator": {
+      "type": "belongsTo",
+      "model": "operator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "selfcares": {
+      "type": "hasMany",
+      "model": "selfcare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      },
+      "through": "selfcareHasMedia"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

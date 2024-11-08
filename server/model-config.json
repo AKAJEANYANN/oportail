@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "selfcare": {
+    "dataSource": "oportailAppDb",
+    "public": true
+  },
+  "message": {
+    "dataSource": "oportailAppDb",
+    "public": true
+  },
+  "operator": {
+    "dataSource": "oportailAppDb",
+    "public": true
+  },
+  "administrator": {
+    "dataSource": "oportailAppDb",
+    "public": true
+  },
+  "media": {
+    "dataSource": "oportailAppDb",
+    "public": true
+  },
+  "selfcareHasMedia": {
+    "dataSource": "oportailAppDb",
+    "public": true
+  },
+  "Role": {
+    "dataSource": "oportailAppDb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "oportailAppDb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "oportailAppDb",
+    "public": false
+  },
+  "appAccessToken": {
+    "dataSource": "oportailAppDb",
+    "public": true
+  }
+}

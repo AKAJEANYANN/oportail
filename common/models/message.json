@@ -1,0 +1,47 @@
+{
+  "name": "message",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "libelle": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "selfcare": {
+      "type": "belongsTo",
+      "model": "selfcare",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "operator": {
+      "type": "belongsTo",
+      "model": "operator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "administrator": {
+      "type": "belongsTo",
+      "model": "administrator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

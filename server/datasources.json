@@ -1,0 +1,13 @@
+{
+  "oportailAppDb": {
+    "host": "dpg-csmmggg8fa8c73a8ogd0-a.oregon-postgres.render.com",
+    "port": 5432,
+    "url": "",
+    "database": "dboportail",
+    "password": "33Zzsf97iUEmlehdjyrXLrSB1RsHf7dA",
+    "name": "oportailAppDb",
+    "user": "useroportail",
+    "connector": "postgresql",
+    "ssl": true
+  }
+}

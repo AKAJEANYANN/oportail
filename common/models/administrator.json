@@ -1,0 +1,70 @@
+{
+  "name": "administrator",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "administratorName": {
+      "type": "string",
+      "default": ""
+    },
+    "administratorPhone": {
+      "type": "string",
+      "default": ""
+    },
+    "administratorDateCreation": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "administratorApprouve": {
+      "type": "boolean",
+      "default": true
+    },
+    "administratorDateApprouve": {
+      "type": "date"
+    },
+    "administratorCode": {
+      "type": "string",
+      "default": ""
+    },
+    "administratorActif": {
+      "type": "boolean",
+      "default": true
+    },
+    "administratorDesactifDate": {
+      "type": "date"
+    },
+    "device_fcm_token": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {
+    "operator": {
+      "type": "belongsTo",
+      "model": "operator",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "messages": {
+      "type": "hasMany",
+      "model": "message",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
