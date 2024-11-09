@@ -12,10 +12,12 @@
       "defaultFn": "uuidv4"
     },
     "mediaUrl": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "mediaName": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "mediaDateCreate": {
       "type": "date"
@@ -24,7 +26,8 @@
       "type": "number"
     },
     "mediaVisible": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     }
   },
   "validations": [],
